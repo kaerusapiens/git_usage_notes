@@ -1,6 +1,8 @@
 ### window power shell - install github cli
 `winget install --id GitHub.cli`
 ### window power shell - authenticate github cli
+`scoop install gh`
+
 `gh auth login`
 
 
@@ -27,6 +29,19 @@
 
 #-u または --set-upstream オプションを使用して、ローカルブランチとリモートブランチを関連付けます。このオプションを使用すると、以降は単に git push コマンドを入力するだけで、ローカルブランチの変更を対応するリモートブランチにプッシュできます。
 
+
+`git remote add origin `
+
+Create file
+`touch <filename>`
+
+### 
+current directory linking with d
+`rm -rf .git`
+
+remove repo
+`gh repo delete xxxx/<repository>`
+`gh repo rename 
 ### Co-work
 Git connect to other project for co-work
 
@@ -46,3 +61,4 @@ show the blob object
 amend current commit
 
 `git commit --amend`
+
