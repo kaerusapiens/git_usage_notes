@@ -6,17 +6,18 @@ graph TD;
     id1[working tree]
     id2["index(stage)"]
     id3[local repository]
+    head("HEAD：最新のコミットの状態")
     end
 
     subgraph github.com
     id[repository]
-    head("HEAD：最新のコミットの状態")
+
     end
 
     id1 -- add -->id2
     id2 -- commit -->id3
     id3 -- push -->id
-    head -.- id
+    head -.- id3
 
 ```
 
