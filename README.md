@@ -172,10 +172,27 @@ git push -u origin main
 
 ### branch related
 
+- show branch list
+
+`git branch`
+
 - create new branch
 
 `git branch <branchname>`
 
+`git branch feature/new-feature`
+
+
 - switch the working branch
 
 `git checkout <branchname>`
+
+- create and switch to the branch
+
+ `git checkout -b <branchname>`
+
+- delete branch
+
+`git branch -d <branch_name>`
+
+### Need to check - git rebase / git merge / sqush commit
