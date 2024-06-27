@@ -152,11 +152,5 @@ git push -u origin main
 `git commit --amend`
 
 - revert commit
-
-show my commit history
-
-`git reflog`
-
-revert the commit 
-
-`git revert <commit HEAD>`
+    - show my commit history `git reflog`
+    -  revert the commit `git revert <commit HEAD>`
