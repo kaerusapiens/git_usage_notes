@@ -123,6 +123,10 @@ git push -u origin main
 
 `git clone <repository name>`
 
+- Get latest version of repository
+
+`git fetch`
+
 ### Check
 - show the blob object
 
@@ -153,4 +157,25 @@ git push -u origin main
 
 - revert commit
     - show my commit history `git reflog`
-    -  revert the commit `git revert <commit HEAD>`
+    -  revert the commit `git revert  <HEAD>`
+
+ >revert is typically used for undoing changes in a safe manner that preserves history
+
+- rest the action
+    - cancel commit only `git reset --soft  <HEAD>`
+    - cancel commit & add `git reset --mixed  <HEAD>`
+    - cancel commit & add & working tree change `git reset --hard <HEAD>`
+        - cancel most current commit `git reset --hard  <HEAD>^`
+
+>rest is used to manipulate the commits and changes. 
+
+
+### branch related
+
+- create new branch
+
+`git branch <branchname>`
+
+- switch the working branch
+
+`git checkout <branchname>`
