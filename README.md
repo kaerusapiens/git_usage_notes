@@ -1,3 +1,27 @@
+### Github basic
+
+```mermaid
+graph TD;
+    subgraph local
+    id1[working tree]
+    id2["index(stage)"]
+    id3[local repository]
+    end
+
+    subgraph github.com
+    id[repository]
+    head("HEAD：最新のコミットの状態")
+    end
+
+    id1 -- add -->id2
+    id2 -- commit -->id3
+    id3 -- push -->id
+    head -.- id
+
+```
+
+
+
 ### Github CLI
 1. window power shell - install github cli
 
@@ -11,6 +35,11 @@
 
 `gh auth login`
 
+### vs code as code editor. 
+
+possible to write git commit commandline in vscode rather than git bash terminal 
+
+`git config --global core.editor "code --wait"`
 
 >errors notes
 >
@@ -31,6 +60,10 @@
 - current directory linking with d
 
 `rm -rf .git`
+
+- remove the file only from repository but left the file in local directory.
+
+`git rm --cached <filename>`
 
 - remove repo
 
@@ -84,7 +117,7 @@ git push -u origin main
 
 
 
-### Co-work
+### Fetch the existing github repository
 - Git connect to other project for co-work
 
 `git clone <repository name>`
@@ -100,6 +133,29 @@ git push -u origin main
 
 `git log -p <filename省略可能>`
 
+### Edit commit
+
+
+
+### 変更を退避する
+
+とあるブランチで作業中だけど、いますぐやりたいことができた。作業がすごく中途半端だからコミットはしたくない。
+
+`git stash`
+`git stash -u`
+
+### Commit 関連修正
+
 - amend current commit
 
 `git commit --amend`
+
+- revert commit
+
+show my commit history
+
+`git reflog`
+
+revert the commit 
+
+`git revert <commit HEAD>`
